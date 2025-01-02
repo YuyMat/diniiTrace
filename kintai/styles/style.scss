@@ -1,0 +1,22 @@
+@use "../../styles/header" as *;
+@use "../../styles/logo" as *;
+@use "../../styles/variables" as *;
+
+body {
+    height: 280vh;
+}
+
+html {
+    font-family: "Noto Sans JP", serif;
+    font-weight: 500;
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+}
+
+.header {
+    @extend .header;
+}
