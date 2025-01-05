@@ -1,6 +1,7 @@
 @use "../../styles/header" as *;
 @use "../../styles/logo" as *;
 @use "../../styles/variables" as *;
+@use "../../styles/move-letter" as *;
 
 body {
     height: 280vh;
@@ -179,10 +180,9 @@ html {
         overflow: hidden;
 
         & button {
-            display: flex;
-            position: relative;
+            @extend .move-letter;
+
             justify-content: center;
-            align-items: center;
             width: 100%;
             height: 100%;
             border: 2px solid $cBG;
@@ -190,37 +190,16 @@ html {
             background-color: $cBG;
             color: $cWhite;
             font-weight: 700;
-            cursor: pointer;
             transition: all .4s;
 
             & p {
-                transition: all .3s ease;
-
                 &:last-child {
-                    position: absolute;
-                    transform: translateY(20px);
                     color: $cBG;
-                    opacity: 0;
-                    visibility: hidden;
                 }
             }
 
             &:hover {
                 background-color: $cWhite;
-
-                & p {
-                    &:first-child {
-                        transform: translateY(-20px);
-                        opacity: 0;
-                        visibility: hidden;
-                    }
-
-                    &:last-child {
-                        transform: none;
-                        opacity: 1;
-                        visibility: visible;
-                    }
-                }
             }
         }
     }

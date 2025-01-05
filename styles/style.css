@@ -265,111 +265,29 @@
   margin: 0;
 }
 
-body {
-  height: 370vh;
-}
-
-html {
-  font-family: "Noto Sans JP", serif;
-  font-weight: 500;
-}
-html *,
-html *::before,
-html *::after {
-  box-sizing: border-box;
-}
-
-.hero-slider__container {
-  position: relative;
-  margin-top: 75px;
-}
-.hero-slider .slick-list {
-  height: 42vw;
-}
-.hero-slider .slick-dots {
-  text-align: start;
-  margin-left: 20px;
-  transform: translateY(-240%);
-  width: auto;
-}
-.hero-slider .slick-dots li {
-  margin-right: 15px;
-}
-.hero-slider .slick-dots li button::before {
-  color: white !important;
-}
-.hero-slider .slick-dots li button::after {
-  border: 2px solid white !important;
-}
-.hero-slider .slick-dots li.slick-active button::before {
-  color: white !important;
-}
-
-.catch-copy {
+.move-letter, .interview__more button {
   display: flex;
-  flex-direction: row;
-  gap: 0px;
-  justify-content: center;
-  color: #ac8417;
-  margin-top: 70px;
-  gap: 135px;
+  align-items: center;
+  cursor: pointer;
 }
-.catch-copy .unit {
-  display: flex;
-  font-size: 24px;
-  font-weight: 700;
+.move-letter p, .interview__more button p {
+  transition: all 0.3s ease;
 }
-.catch-copy .head {
-  font-size: 32px;
-  font-weight: 700;
-  text-align: center;
+.move-letter p:last-of-type, .interview__more button p:last-of-type {
+  position: absolute;
+  transform: translateY(20px);
+  opacity: 0;
+  visibility: hidden;
 }
-.catch-copy .head::after {
-  content: "";
-  display: block;
-  height: 1px;
-  width: 100%;
-  background-color: #ac8417;
-  margin-top: 7px;
+.move-letter:hover p:first-of-type, .interview__more button:hover p:first-of-type {
+  transform: translateY(-20px);
+  opacity: 0;
+  visibility: hidden;
 }
-.catch-copy__left .unit {
-  align-items: flex-end;
-  padding-bottom: 20px;
-  transform: translateY(-18px);
-}
-.catch-copy__right .unit {
-  flex-direction: column;
-  justify-content: flex-end;
-  transform: translateY(-25px);
-}
-.catch-copy__right .unit p:last-child {
-  transform: translateY(-12px);
-}
-.catch-copy .number {
-  font-weight: 600;
-  font-size: 96px;
-  font-family: "Poppins", serif;
-  font-weight: 600;
-}
-.catch-copy .content {
-  display: flex;
-  flex-direction: row;
-  transform: translateY(-12px);
-}
-
-.company-slider {
-  margin-top: 50px;
-}
-.company-slider1 img {
-  width: 170px;
-  padding: 0 30px;
-}
-.company-slider2 img {
-  width: 170px;
-  padding: 0 30px;
-}
-.company-slider .slick-list {
-  height: 150px;
+.move-letter:hover p:last-of-type, .interview__more button:hover p:last-of-type {
+  transform: none;
+  opacity: 1;
+  visibility: visible;
 }
 
 .interview {
@@ -863,47 +781,138 @@ html *::after {
   justify-content: center;
   margin-top: 100px;
 }
-.interview__btn {
-  display: flex;
-  position: relative;
+.interview__more button {
   width: 240px;
   height: 52px;
   padding: 16px 12px;
   justify-content: center;
   align-items: center;
   color: #56698f;
-  border-color: #56698f;
   border: 2px solid #56698f;
   border-radius: 4px;
   background-color: white;
-  cursor: pointer;
   transition: all 0.3s;
-  overflow: hidden;
 }
-.interview__btn p {
-  transition: all 0.4s;
+.interview__more button p {
+  transition-delay: 0.1s;
 }
-.interview__btn p:first-child {
-  color: #56698f;
+.interview__more button p:first-child {
   font-weight: 600;
 }
-.interview__btn p:last-child {
+.interview__more button p:last-child {
   position: absolute;
-  top: 28px;
   color: white;
   font-weight: 700;
-  opacity: 0;
 }
-.interview__btn:hover {
+.interview__more button:hover {
   background-color: #56698f;
 }
-.interview__btn:hover p:first-child {
-  transform: translateY(-40px);
-  opacity: 0;
+
+body {
+  height: 370vh;
 }
-.interview__btn:hover p:last-child {
-  transform: translateY(-17px);
-  opacity: 1;
+
+html {
+  font-family: "Noto Sans JP", serif;
+  font-weight: 500;
+}
+html *,
+html *::before,
+html *::after {
+  box-sizing: border-box;
+}
+
+.hero-slider__container {
+  position: relative;
+  margin-top: 75px;
+}
+.hero-slider .slick-list {
+  height: 42vw;
+}
+.hero-slider .slick-dots {
+  text-align: start;
+  margin-left: 20px;
+  transform: translateY(-240%);
+  width: auto;
+}
+.hero-slider .slick-dots li {
+  margin-right: 15px;
+}
+.hero-slider .slick-dots li button::before {
+  color: white !important;
+}
+.hero-slider .slick-dots li button::after {
+  border: 2px solid white !important;
+}
+.hero-slider .slick-dots li.slick-active button::before {
+  color: white !important;
+}
+
+.catch-copy {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  justify-content: center;
+  color: #ac8417;
+  margin-top: 70px;
+  gap: 135px;
+}
+.catch-copy .unit {
+  display: flex;
+  font-size: 24px;
+  font-weight: 700;
+}
+.catch-copy .head {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+.catch-copy .head::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #ac8417;
+  margin-top: 7px;
+}
+.catch-copy__left .unit {
+  align-items: flex-end;
+  padding-bottom: 20px;
+  transform: translateY(-18px);
+}
+.catch-copy__right .unit {
+  flex-direction: column;
+  justify-content: flex-end;
+  transform: translateY(-25px);
+}
+.catch-copy__right .unit p:last-child {
+  transform: translateY(-12px);
+}
+.catch-copy .number {
+  font-weight: 600;
+  font-size: 96px;
+  font-family: "Poppins", serif;
+  font-weight: 600;
+}
+.catch-copy .content {
+  display: flex;
+  flex-direction: row;
+  transform: translateY(-12px);
+}
+
+.company-slider {
+  margin-top: 50px;
+}
+.company-slider1 img {
+  width: 170px;
+  padding: 0 30px;
+}
+.company-slider2 img {
+  width: 170px;
+  padding: 0 30px;
+}
+.company-slider .slick-list {
+  height: 150px;
 }
 
 .dot-animation .slick-dots li button::before {

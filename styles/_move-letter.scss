@@ -1,0 +1,30 @@
+.move-letter {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    & p {
+        transition: all .3s ease;
+
+        &:last-of-type {
+            position: absolute;
+            transform: translateY(20px);
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &:hover p {
+        &:first-of-type {
+            transform: translateY(-20px);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &:last-of-type {
+            transform: none;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

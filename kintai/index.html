@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +16,17 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:wght@600;700&display=swap"
         rel="stylesheet">
 
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="../functions/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="../functions/slick/slick-theme.css" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js" defer></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js" defer></script>
+    <script type="text/javascript" src="../functions/slick/slick.min.js" defer></script>
+
     <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
 </head>
+
 <body>
     <header class="header">
         <div class="header__left">
@@ -89,6 +99,259 @@
         </ul>
     </header>
 
+    <div class="index">
+        <div class="index__logo-bg">
+            <img src="../images/kintai.png" class="index__logo-img">
+        </div>
+        <ul class="index__nav">
+            <a href=".explain">
+                <li class="content move-letter">
+                    <p>概要</p>
+                    <p>概要</p>
+                </li>
+            </a>
+            <a href="">
+                <li class="positive move-letter">
+                    <p>導入メリット</p>
+                    <p>導入メリット</p>
+                </li>
+            </a>
+            <a href="#">
+                <li class="function move-letter">
+                    <p>主な機能</p>
+                    <p>主な機能</p>
+                </li>
+            </a>
+        </ul>
+    </div>
+
+    <div class="hero">
+        <div class="hero-inner">
+            <div class="up">
+                <div class="logo-bg">
+                    <img src="../images/kintai.png" class="logo-img">
+                </div>
+                <div class="catch-copy">
+                    <p>シフト・勤怠・給与を</p>
+                    <p>一元管理する</p>
+                    <p>ダイニー勤怠</p>
+                </div>
+            </div>
+            <div class="down">
+                <button class="contact move-letter">
+                    <p>お問い合わせ ></p>
+                    <p>お問い合わせ ></p>
+                </button>
+            </div>
+        </div>
+        <div class="bg-pc"></div>
+    </div>
+
+    <div class="explain">
+        <div class="explain__bg"></div>
+        <div class="explain__title">ダイニー勤怠で一元管理</div>
+        <div class="explain__content">
+            飲食店のバックオフィス業務を劇的に削減するサービスです。<br>
+            シフト作成・勤怠管理・給与計算を一元管理でき、業務オペレーションを大幅に削減できます。例えば、<br>
+            「シフト機能」では、シフトをほぼ自動作成することで作業時間を最小限に抑えるだけでなく、売上予算と<br>
+            連動できるため人件費を適正化でき、ブレもなくせます。他にも、振込データや給与明細の作成時間を減ら<br>
+            せる「給与機能」など、バックオフィス業務を包括的に削減させます。
+        </div>
+    </div>
+
+    <div class="interview">
+        <div class="interview__text">
+            <p class="title">Interview</p>
+            <p class="subtitle">顧客インタビュー</p>
+        </div>
+
+        <div class="interview__slider dot-animation">
+
+            <a href="#">
+                <div class="interview__slider1 seven-eleven">
+                    <div class="interview__picture"><img src="../images/sevenEleven.jpeg"></div>
+                    <div class="interview__type">顧客インタビュー</div>
+                    <div class="interview__content">
+                        <p>セブンイレブンセブンイレブンセブンイレブンセブンイレブンセブンイレブンセブンイレブンセブンイレブンセブンイレブンセブンイ</p>
+                        <p>セブンイレブンセブンイレブンセブンイレブンセブンイレブンセブンイレブンセブンイレブンセブンイレブンセブンイレブンセブンイ</p>
+                    </div>
+                    <div class="interview__company-name">株式会社セブンイレブン</div>
+                    <ul class="interview__use-functions">
+                        <li>ダイニー POSレジ</li>
+                        <li>ダイニー モバイルオーダー</li>
+                        <li>ダイニー 顧客管理</li>
+                    </ul>
+                    <ul class="interview__tags">
+                        <li>#データ活用</li>
+                        <li>#人材育成</li>
+                        <li>#店舗マネジメント強化</li>
+                        <li>#顧客満足度アップ</li>
+                    </ul>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="interview__slider2 lawson">
+                    <div class="interview__picture"><img src="../images/lawson.jpeg"></div>
+                    <div class="interview__type">顧客インタビュー</div>
+                    <div class="interview__content">
+                        <p>ローソンローソンローソンローソンローソンローソンローソンローソンローソンローソンローソンローソンローソンローソンローソン</p>
+                        <p>ローソンローソンローソンローソンローソンローソンローソンローソンローソンローソンローソンローソンローソンローソンローソン</p>
+                    </div>
+                    <div class="interview__company-name">株式会社ローソン</div>
+                    <ul class="interview__use-functions">
+                        <li>ダイニー POSレジ</li>
+                        <li>ダイニー モバイルオーダー</li>
+                        <li>ダイニー 顧客管理</li>
+                    </ul>
+                    <ul class="interview__tags">
+                        <li>#データ活用</li>
+                        <li>#集客強化</li>
+                        <li>#店舗マネジメント強化</li>
+                        <li>#顧客満足度アップ</li>
+                    </ul>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="interview__slider3 family-mart">
+                    <div class="interview__picture"><img src="../images/familyMart.jpg"></div>
+                    <div class="interview__type">顧客インタビュー</div>
+                    <div class="interview__content">
+                        <p>ファミリーマートファミリーマートファミリーマートファミリーマートファミリーマートファミリーマートファミリーマートファミリ</p>
+                        <p>ファミリーマートファミリーマートファミリーマートファミリーマートファミリーマートファミリーマートファミリーマートファミリ</p>
+                    </div>
+                    <div class="interview__company-name">株式会社ファミリーマート</div>
+                    <ul class="interview__use-functions">
+                        <li>ダイニー POSレジ</li>
+                        <li>ダイニー モバイルオーダー</li>
+                        <li>ダイニー キャッシュレス</li>
+                        <li>ダイニー モバイル決済</li>
+                        <li>ダイニー 顧客管理</li>
+                    </ul>
+                    <ul class="interview__tags">
+                        <li>#人手不足</li>
+                        <li>#従業員満足度アップ</li>
+                        <li>#顧客満足度アップ</li>
+                    </ul>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="interview__slider4 daily-yamazaki">
+                    <div class="interview__picture"><img src="../images/dailyYamazaki.jpg"></div>
+                    <div class="interview__type">顧客インタビュー</div>
+                    <div class="interview__content">
+                        <p>デイリーヤマザキデイリーヤマザキデイリーヤマザキデイリーヤマザキデイリーヤマザキデイリーヤマザキデイリーヤマザキデイリー</p>
+                        <p>デイリーヤマザキデイリーヤマザキデイリーヤマザキデイリーヤマザキデイリーヤマザキデイリーヤマザキデイリーヤマザキデイリー</p>
+                    </div>
+                    <div class="interview__company-name">株式会社デイリーヤマザキ</div>
+                    <ul class="interview__use-functions">
+                        <li>ダイニー POSレジ</li>
+                        <li>ダイニー モバイルオーダー</li>
+                        <li>ダイニー キャッシュレス</li>
+                        <li>ダイニー モバイルオーダー</li>
+                    </ul>
+                    <ul class="interview__tags">
+                        <li>#データ活用</li>
+                        <li>#人材育成</li>
+                        <li>#集客強化</li>
+                    </ul>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="interview__slider5 mini-stop">
+                    <div class="interview__picture"><img src="../images/miniStop.jpeg"></div>
+                    <div class="interview__type">顧客インタビュー</div>
+                    <div class="interview__content">
+                        <p>ミニストップミニストップミニストップミニストップミニストップミニストップミニストップミニストップミニストップミニストップ</p>
+                        <p>ミニストップミニストップミニストップミニストップミニストップミニストップミニストップミニストップミニストップミニストップ</p>
+                    </div>
+                    <div class="interview__company-name">株式会社ミニストップ</div>
+                    <ul class="interview__use-functions">
+                        <li>ダイニー POSレジ</li>
+                        <li>ダイニー モバイルオーダー</li>
+                        <li>ダイニー 顧客管理</li>
+                    </ul>
+                    <ul class="interview__tags">
+                        <li>#データ活用</li>
+                        <li>#人材育成</li>
+                        <li>#集客強化</li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+
+        <div class="interview__more">
+            <button class="interview__btn move-letter">
+                <p>もっと見る</p>
+                <p>もっと見る</p>
+            </button>
+        </div>
+
+    </div>
+
+    <div class="merit">
+        <div class="merit__inner-1">
+            <p>Benefits</p>
+            <div class="merit__title">導入メリット</div>
+        </div>
+        <ul class="merit__inner-2">
+            <li class="easy">
+                <img src="../images/kintai-illustlogo.png" class="icon">
+                <div class="letter">
+                    <div class="title">業務管理が圧倒的にラクになる</div>
+                    <p class="description">
+                        シフト作成・勤怠管理・給与計算を一元管理できる<br>
+                        ため、業務オペレーションを大幅に削減できます。
+                    </p>
+                </div>
+            </li>
+            <li class="decrease">
+                <img src="../images/kintai-illustlogo.png" class="icon">
+                <div class="letter">
+                    <div class="title">“本当に”人件費を削減できる</div>
+                    <p class="description">
+                        売上予算と連動して自動でシフトが組まれるので、<br>
+                        作成者のスキルに左右されることなく、人件費がブ<br>
+                        レません。
+                    </p>
+                </div>
+            </li>
+            <li class="min">
+                <img src="../images/kintai-illustlogo.png" class="icon">
+                <div class="letter">
+                    <div class="title">シフト作成の時間を最小化できる</div>
+                    <p class="description">
+                        モデルシフトに基づいて、必要なポジションに必要<br>
+                        な人数を割り当てるだけ。店長のスキルに左右され<br>
+                        ず、瞬時に最適なシフトを作成できます。
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="more">
+        <div class="more__bg"></div>
+        <div class="more__content">
+            <div class="more__title">導入の検討や、製品の詳細などは気軽にお問い合わせください</div>
+            <a href="../contact/">
+                <button class="more__contact">
+                    <div class="item-1">
+                        <img src="../images/mail.png">
+                        <p>お問い合わせ</p>
+                    </div>
+                    <div class="item-2">
+                        <img src="../images/mail.png">
+                        <p>お問い合わせ</p>
+                    </div>
+                </button>
+            </a>
+        </div>
+    </div>
 
 </body>
+
 </html>
