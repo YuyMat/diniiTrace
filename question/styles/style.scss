@@ -1,0 +1,227 @@
+@use "../../styles/header" as *;
+@use "../../styles/logo" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/move-letter" as *;
+
+html {
+    font-family: "Noto Sans JP", serif;
+    font-weight: 500;
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+}
+
+body {
+    height: 200vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.header {
+    @extend .header;
+}
+
+.title {
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 254px;
+        background-color: $cBG;
+        margin-top: 77px;
+        z-index: -1;
+    }
+
+    &__inner {
+        color: $cWhite;
+        padding: 0 20px;
+        padding-top: 92px;
+
+        & .up {
+            & .breadcrumbs {
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .5px;
+            }
+        }
+
+        & .down {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & .faq {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 1.8px;
+                padding-top: 40px;
+            }
+
+            & h1 {
+                font-size: 48px;
+                font-weight: 800;
+                padding-top: 14px;
+                letter-spacing: 1.8px;
+            }
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 56.5px;
+    margin-top: 145px;
+    gap: 7px 0;
+    list-style: none;
+
+    & li {
+        width: 384px;
+        height: 64px;
+        flex-basis: calc(100%/3);
+
+        & button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 384px;
+            height: 64px;
+            border: none;
+            font-size: 20px;
+            font-weight: 600;
+            background-color: $cNavBG;
+            cursor: pointer;
+
+            & p {
+                width: fit-content;
+            }
+        }
+
+        &.active button {
+            background-color: $cBG;
+            color: $cWhite;
+        }
+    }
+}
+
+.container {
+    margin-top: 130px;
+    padding: 0 20px;
+
+    & div {
+        transition: all .3s ease;
+    }
+
+    &__inner-1 {
+        position: relative;
+        width: 1152px;
+        height: 134px;
+        margin: 0 auto;
+        background-color: $cWhite;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $cSampleLetter;
+        }
+
+        & p {
+            padding-left: 40px;
+            padding-top: 20px;
+            font-size: 20px;
+            letter-spacing: 1px;
+
+            &.a {
+                color: $cConpanyName;
+                padding-top: 27px;
+            }
+        }
+    }
+
+    &__inner-2 {
+        position: relative;
+        width: 1152px;
+        height: 134px;
+        margin: 0 auto;
+        background-color: $cWhite;
+        transform: translateY(-60px);
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            position: relative;
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: $cSampleLetter;
+            z-index: 5;
+        }
+
+        &:hover {
+            background-color: $cSampleLetter;
+        }
+
+        & p {
+            padding-left: 40px;
+            padding-top: 20px;
+            font-size: 20px;
+            letter-spacing: 1px;
+
+            &.a {
+                color: $cConpanyName;
+                padding-top: 27px;
+            }
+        }
+    }
+
+    & .white-bg {
+        width: 1152px;
+        height: 100px;
+        margin: 0 36.5px;
+        background-color: $cWhite;
+        transform: translateY(-120px);
+
+        &::before {
+            content: '';
+            position: relative;
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: $cSampleLetter;
+            z-index: 5;
+        }
+    }
+
+    &.open1 {
+        & .container__inner-2 {
+            transform: none;
+        }
+
+        & .white-bg {
+            transform: translateY(-60px);
+        }
+
+        & .down1 {
+            transform: rotate(180deg);
+        }
+    }
+
+    &.open2 {
+        & .white-bg {
+            transform: translateY(-7px);
+        }
+
+        & .down2 {
+            transform: rotate(180deg);
+        }
+    }
+
+    & .down {
+        position: absolute;
+        right: 45px;
+        top: 28px;
+        z-index: 10;
+    }
+}

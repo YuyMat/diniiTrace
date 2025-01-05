@@ -4,21 +4,22 @@
 @use "../../styles/move-letter" as *;
 @use "../../styles/interview-slider" as *;
 
-body {
-    height: 550vh;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
 
 html {
     font-family: "Noto Sans JP", serif;
     font-weight: 500;
-
+    
     *,
     *::before,
     *::after {
         box-sizing: border-box;
     }
+}
+
+body {
+    height: 550vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .header {
@@ -69,8 +70,9 @@ html {
         height: 100%;
 
         & li {
-            // @extend .move-letter;
+            @extend .move-letter;
             color: $cBG;
+            height: 100%;
         }
     }
 }
@@ -80,11 +82,11 @@ html {
     margin-top: 245px;
     margin-left: 40px;
 
-    .hero-inner {
+    & .hero-inner {
         overflow: hidden;
     }
 
-    .up {
+    & .up {
         position: relative;
         display: flex;
         flex-direction: row;
@@ -92,7 +94,7 @@ html {
         font-weight: 800;
         font-size: 38px;
 
-        .logo-bg {
+        & .logo-bg {
             display: flex;
             width: 159px;
             height: 159px;
@@ -106,7 +108,7 @@ html {
             }
         }
 
-        .catch-copy {
+        & .catch-copy {
             letter-spacing: 1px;
             margin-left: 26px;
             transform: translateY(-10px);
@@ -114,7 +116,11 @@ html {
     }
 
     .down {
-        .contact {
+        & a {
+            text-decoration: none
+        }
+
+        & .contact {
             @extend .move-letter;
 
             justify-content: center;
@@ -144,7 +150,7 @@ html {
         }
     }
 
-    .bg-pc {
+    & .bg-pc {
         position: absolute;
         top: -260px;
         right: -100px;
@@ -154,6 +160,7 @@ html {
         background-size: cover;
         background-position: center;
         background-image: url("../../images/macbook.jpeg");
+        z-index: -1;
     }
 }
 

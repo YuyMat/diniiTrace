@@ -265,26 +265,26 @@
   margin: 0;
 }
 
-.move-letter, .hero .down .contact, .interview__more button {
+.move-letter, .index__nav li, .hero .down .contact, .interview__more button {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-.move-letter p, .hero .down .contact p, .interview__more button p {
+.move-letter p, .index__nav li p, .hero .down .contact p, .interview__more button p {
   transition: all 0.3s ease;
 }
-.move-letter p:last-of-type, .hero .down .contact p:last-of-type, .interview__more button p:last-of-type {
+.move-letter p:last-of-type, .index__nav li p:last-of-type, .hero .down .contact p:last-of-type, .interview__more button p:last-of-type {
   position: absolute;
   transform: translateY(20px);
   opacity: 0;
   visibility: hidden;
 }
-.move-letter:hover p:first-of-type, .hero .down .contact:hover p:first-of-type, .interview__more button:hover p:first-of-type {
+.move-letter:hover p:first-of-type, .index__nav li:hover p:first-of-type, .hero .down .contact:hover p:first-of-type, .interview__more button:hover p:first-of-type {
   transform: translateY(-20px);
   opacity: 0;
   visibility: hidden;
 }
-.move-letter:hover p:last-of-type, .hero .down .contact:hover p:last-of-type, .interview__more button:hover p:last-of-type {
+.move-letter:hover p:last-of-type, .index__nav li:hover p:last-of-type, .hero .down .contact:hover p:last-of-type, .interview__more button:hover p:last-of-type {
   transform: none;
   opacity: 1;
   visibility: visible;
@@ -808,12 +808,6 @@
   background-color: #56698f;
 }
 
-body {
-  height: 550vh;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
 html {
   font-family: "Noto Sans JP", serif;
   font-weight: 500;
@@ -822,6 +816,12 @@ html *,
 html *::before,
 html *::after {
   box-sizing: border-box;
+}
+
+body {
+  height: 550vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .index {
@@ -866,6 +866,7 @@ html *::after {
 }
 .index__nav li {
   color: #282828;
+  height: 100%;
 }
 
 .hero {
@@ -901,6 +902,9 @@ html *::after {
   margin-left: 26px;
   transform: translateY(-10px);
 }
+.hero .down a {
+  text-decoration: none;
+}
 .hero .down .contact {
   justify-content: center;
   color: white;
@@ -934,6 +938,7 @@ html *::after {
   background-size: cover;
   background-position: center;
   background-image: url("../../images/macbook.jpeg");
+  z-index: -1;
 }
 
 .explain {
