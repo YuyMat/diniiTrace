@@ -941,26 +941,26 @@ body {
   z-index: -1;
 }
 
-.explain {
+#explain {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 85px;
 }
-.explain__bg {
+#explain__bg {
   position: absolute;
   background-color: #F7FAFC;
   width: 100%;
   height: 376px;
   z-index: -1;
 }
-.explain__title {
+#explain__title {
   font-size: 32px;
   font-weight: 800;
   margin-top: 75px;
   letter-spacing: 1.3px;
 }
-.explain__content {
+#explain__content {
   margin-top: 24px;
   font-size: 16px;
   font-weight: 600;
@@ -972,24 +972,24 @@ body {
   margin-top: 165px;
 }
 
-.merit__inner-1 {
+#merit__inner-1 {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 160px;
   gap: 9px;
 }
-.merit__inner-1 p {
+#merit__inner-1 p {
   color: #56698f;
   font-size: 20px;
   font-weight: 900;
 }
-.merit__inner-1 .merit__title {
+#merit__inner-1 #merit__title {
   font-size: 48px;
   font-weight: 800;
   color: #3f4042;
 }
-.merit__inner-2 {
+#merit__inner-2 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -998,7 +998,7 @@ body {
   margin-top: 60px;
   padding: 0;
 }
-.merit__inner-2 li {
+#merit__inner-2 li {
   display: flex;
   flex-direction: row;
   width: 558px;
@@ -1007,20 +1007,20 @@ body {
   border-radius: 4px;
   padding: 32px 20px;
 }
-.merit__inner-2 li .icon {
+#merit__inner-2 li .icon {
   width: 67px;
   height: 80px;
   padding-left: 10px;
 }
-.merit__inner-2 li .letter {
+#merit__inner-2 li .letter {
   margin-left: 50px;
 }
-.merit__inner-2 li .letter .title {
+#merit__inner-2 li .letter .title {
   font-size: 24px;
   font-weight: 800;
   padding-bottom: 20px;
 }
-.merit__inner-2 li .letter .description {
+#merit__inner-2 li .letter .description {
   color: #6F7175;
   font-size: 16px;
   font-weight: 500;
