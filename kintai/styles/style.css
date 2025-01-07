@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 76px;
   top: 0;
   left: 0;
@@ -213,7 +213,7 @@
   display: flex;
   justify-content: center;
   top: 76px;
-  left: -390px;
+  right: 0;
   width: 100vw;
   height: 56px;
   background-color: #F7FAFC;
@@ -820,6 +820,7 @@ html *::after {
 
 body {
   height: 550vh;
+  width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -828,6 +829,7 @@ body {
   display: flex;
   position: relative;
   align-items: center;
+  justify-content: center;
   height: 56px;
   top: 77px;
   background-color: #f2f7ff;
@@ -856,7 +858,6 @@ body {
   position: relative;
   display: flex;
   flex-direction: row;
-  left: 500px;
   gap: 20px;
   list-style: none;
   padding: 0;

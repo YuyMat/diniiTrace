@@ -18,6 +18,7 @@ html {
 
 body {
     height: 550vh;
+    width: 100vw;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -30,6 +31,7 @@ body {
     display: flex;
     position: relative;
     align-items: center;
+    justify-content: center;
     height: 56px;
     top: 77px;
     background-color: $cIndex;
@@ -61,7 +63,6 @@ body {
         position: relative;
         display: flex;
         flex-direction: row;
-        left: 500px;
         gap: 20px;
         list-style: none;
         padding: 0;

@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 76px;
   top: 0;
   left: 0;
@@ -213,7 +213,7 @@
   display: flex;
   justify-content: center;
   top: 76px;
-  left: -390px;
+  right: 0;
   width: 100vw;
   height: 56px;
   background-color: #F7FAFC;
@@ -302,6 +302,7 @@ html *::after {
 
 body {
   height: 200vh;
+  width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -343,13 +344,18 @@ body {
 }
 
 .nav {
+  max-width: 1152px;
+  margin-top: 145px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav__inner {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0 56.5px;
-  margin-top: 145px;
   gap: 7px 0;
   list-style: none;
+  padding: 0;
 }
 .nav li {
   width: 384px;
@@ -439,7 +445,7 @@ body {
 .container .white-bg {
   width: 1152px;
   height: 100px;
-  margin: 0 36.5px;
+  margin: 0 auto;
   background-color: white;
   transform: translateY(-120px);
 }
@@ -462,10 +468,13 @@ body {
   transform: rotate(180deg);
 }
 .container.open2 .white-bg {
-  transform: translateY(-7px);
+  transform: translateY(-60px);
 }
 .container.open2 .down2 {
   transform: rotate(180deg);
+}
+.container.open1.open2 .white-bg {
+  transform: translateY(-7px);
 }
 .container .down {
   position: absolute;

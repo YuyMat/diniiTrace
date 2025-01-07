@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 76px;
   top: 0;
   left: 0;
@@ -213,7 +213,7 @@
   display: flex;
   justify-content: center;
   top: 76px;
-  left: -390px;
+  right: 0;
   width: 100vw;
   height: 56px;
   background-color: #F7FAFC;
@@ -292,6 +292,7 @@
 
 body {
   height: 280vh;
+  width: 100vw;
 }
 
 html {

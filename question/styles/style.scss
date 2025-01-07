@@ -16,6 +16,7 @@ html {
 
 body {
     height: 200vh;
+    width: 100vw;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -70,13 +71,19 @@ body {
 }
 
 .nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0 56.5px;
+    max-width: 1152px;
     margin-top: 145px;
-    gap: 7px 0;
-    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__inner {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 7px 0;
+        list-style: none;
+        padding: 0;
+    }
 
     & li {
         width: 384px;
@@ -179,7 +186,7 @@ body {
     & .white-bg {
         width: 1152px;
         height: 100px;
-        margin: 0 36.5px;
+        margin: 0 auto;
         background-color: $cWhite;
         transform: translateY(-120px);
 
@@ -210,11 +217,17 @@ body {
 
     &.open2 {
         & .white-bg {
-            transform: translateY(-7px);
+            transform: translateY(-60px);
         }
 
         & .down2 {
             transform: rotate(180deg);
+        }
+    }
+
+    &.open1.open2 {
+        & .white-bg {
+            transform: translateY(-7px);
         }
     }
 
